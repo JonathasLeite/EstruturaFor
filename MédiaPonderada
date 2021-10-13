@@ -1,0 +1,35 @@
+using System;
+using System.Globalization;
+
+namespace VS_WS
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x, n;
+            double p1 = 2.00;
+            double p2 = 3.00;
+            double p3 = 5.00;
+            double d1, d2, d3, media, somaP;
+
+            somaP = p1 + p2 + p3;
+
+            n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                x = n;
+                string[] vet = Console.ReadLine().Split(' ');
+                d1 = double.Parse(vet[0], CultureInfo.InvariantCulture);
+                d2 = double.Parse(vet[1], CultureInfo.InvariantCulture);
+                d3 = double.Parse(vet[2], CultureInfo.InvariantCulture);
+
+                media = (((d1 * p1)) + ((d2 * p2)) + ((d3 * p3))) / somaP;
+
+                Console.WriteLine(media.ToString("f1", CultureInfo.InvariantCulture));
+            }
+        }
+
+    }
+
+}
